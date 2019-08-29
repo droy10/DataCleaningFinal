@@ -136,8 +136,8 @@ names(newtab)[66] <- "COL66"
 # We will summarize the data by activity and subject:
 act_subject_split <- group_by(newtab, Activity, Subject)
 
-# The final table, "t", summarizes by activity and subject, and I use the original, more descriptive, column names:
-t <- newtab %>% group_by(Activity, Subject) %>% summarize(
+# The final table, "summary_table", summarizes by activity and subject, and I use the original, more descriptive, column names:
+summary_table <- newtab %>% group_by(Activity, Subject) %>% summarize(
 	"tBodyAcc-mean()-X" = mean(COL1),
 	"tBodyAcc-mean()-Y" = mean(COL2),
 	"tBodyAcc-mean()-Z" = mean(COL3),
